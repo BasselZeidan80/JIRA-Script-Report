@@ -29,7 +29,7 @@ Update the `index.js` file with your Jira credentials:
 
 - **JIRA_BASE_URL**: Your Jira instance URL (e.g., `https://yourdomain.atlassian.net`)
 - **JIRA_EMAIL**: Your Jira email
-- **JIRA_API_TOKEN**: Your Jira API token
+- **JIRA_API_TOKEN**: Your Jira API token from url https://id.atlassian.com/manage-profile/security/api-tokens
 - **JIRA_PROJECT_KEY**: Your Jira PROJECT_KEY
 
 ### 4. Run the Script
