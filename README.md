@@ -1,11 +1,11 @@
 # Jira Issues Report Generator with Charts
 
-This project generates an Excel file containing Jira issue data, including a pie chart summarizing issue statuses. The project is implemented in JavaScript using the **ExcelJS** library.
+This project generates an Excel file containing Jira issue data,  . The project is implemented in JavaScript using the **ExcelJS** library.
 
 ## Prerequisites
 
 ### Required Tools and Software
-- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Node.js](https://nodejs.org/)  
 - A Jira account with an active project
 - Jira API Token (for authentication)
 - **ExcelJS** library installed
@@ -27,7 +27,7 @@ npm install
 ### 3. Configure Jira Credentials
 Update the `index.js` file with your Jira credentials:
 
-- **JIRA_BASE_URL**: Your Jira instance URL (e.g., `https://yourdomain.atlassian.net`)
+- **JIRA_BASE_URL**: Your Jira instance URL (  `https://yourdomain.atlassian.net`)
 - **JIRA_EMAIL**: Your Jira email
 - **JIRA_API_TOKEN**: Your Jira API token from url https://id.atlassian.com/manage-profile/security/api-tokens
 - **JIRA_PROJECT_KEY**: Your Jira PROJECT_KEY
@@ -54,40 +54,12 @@ You can use a VBA macro to automatically generate the chart. Follow these steps:
 3. Insert a new module: **Insert > Module**.
 4. Paste the following VBA code:
 
-```vba
-Sub CreatePieChart()
-    Dim ws As Worksheet
-    Dim chartObj As ChartObject
-    Dim chartRange As Range
+ 
 
-    ' Set the worksheet and data range
-    Set ws = ThisWorkbook.Sheets("Chart Data")
-    Set chartRange = ws.Range("A1:B8") ' Adjust range based on data size
-
-    ' Add a chart
-    Set chartObj = ws.ChartObjects.Add(Left:=300, Width:=400, Top:=50, Height:=300)
-    With chartObj.Chart
-        .SetSourceData Source:=chartRange
-        .ChartType = xlPie
-        .HasTitle = True
-        .ChartTitle.Text = "Issues by Status"
-    End With
-End Sub
-```
-
-5. Run the macro to generate a pie chart.
-
-### Automating the Chart Creation
-For automated chart creation upon file open, save the Excel file as a macro-enabled workbook (*.xlsm) and use the following code in the `ThisWorkbook` module:
-
-```vba
-Private Sub Workbook_Open()
-    CreatePieChart
-End Sub
-```
+  
 
 ## Output
-- **Excel File**: `jira_issues.xlsx`
+- **Excel File**: `jiraReport.xlsx`
 - Includes issue data and an optional pie chart summarizing statuses.
 
 ## Notes
@@ -96,3 +68,6 @@ End Sub
 
 ## License
 This project is licensed under the MIT License.
+
+## Created By:
+Bassel A Zeidan...
