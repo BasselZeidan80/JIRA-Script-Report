@@ -54,9 +54,6 @@ You can use a VBA macro to automatically generate the chart. Follow these steps:
 3. Insert a new module: **Insert > Module**.
 4. Paste the following VBA code:
 
- 
-
-  
 
 ## Output
 - **Excel File**: `jiraReport.xlsx`

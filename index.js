@@ -3,16 +3,16 @@ const axios = require('axios');
 const ExcelJS = require('exceljs');
 
 // set your domain BaseUrl
-const JIRA_BASE_URL = 'https://amanacap.atlassian.net'; 
+const JIRA_BASE_URL = 'https://XXXXXXXX.atlassian.net'; 
 // set your email 
-const JIRA_EMAIL = 'Bassel.Zeidan@amanacapital.com'; 
+const JIRA_EMAIL = 'Bassel.Zeidan@XXXXXXXXX.com'; 
 // set your API token (check readme file to know how you can get the API token)
-const JIRA_API_TOKEN = 'ATATT3xFfGF0DCcoJY-m9xqicVgy7-GjVgj4AsxyFojLN1nE0n_RECZxh4bzE4OLu7DIaeOQ8ZtvE6h2KLZJAmx5Cw4-gXMNEI_Y26_eccfAQXBovl0m1UtzpTATe0s2sPQmnM2SKCZLvEHMBEE6IFlZGOsG0PtvElOmAonQeHXD_VJuO0wEVG8=321D5B40';  
+const JIRA_API_TOKEN = 'XXXXXXXXXXX';  
 
 async function fetchJiraIssues() {
     try {
         const response = await axios.get(
-            `${JIRA_BASE_URL}/rest/api/3/search?jql=project=AMT`, // Replace AMT with Your Project Key
+            `${JIRA_BASE_URL}/rest/api/3/search?jql=project=XXXXXX`, // Replace XXXXXX with Your Project Key
             {
                 headers: {
                     Authorization: `Basic ${Buffer.from(`${JIRA_EMAIL}:${JIRA_API_TOKEN}`).toString('base64')}`,
