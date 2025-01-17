@@ -100,7 +100,7 @@ async function exportToExcelWithChart() {
         });
     });
 
-    const chartWorksheet = workbook.addWorksheet('Paviot Table');
+    const chartWorksheet = workbook.addWorksheet('Pivot Table');
     chartWorksheet.addRow(['Status', 'Count']);
     pieChartLabels.forEach((label, index) => {
         chartWorksheet.addRow([label, pieChartValues[index]]);
